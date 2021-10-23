@@ -1,0 +1,7 @@
+.dialog-content {
+    background: url("../Images/modal-clearDay.jpg");
+    background-size: cover;
+    background-position: 10px;
+    width: 500px;
+    height: 1000px;
+}

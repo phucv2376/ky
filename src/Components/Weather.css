@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+.weather-text {
+    color: white;
+    font-size: 175%;
+    font-family: Helvetica, sans-serif;
+    align-self: center;
+}
+
+.weather-wrapper {
+    float: right;
+    cursor: pointer;
+    display: flex;
+}
+
+.weather-img {
+    width: 85%;
+    height: 85%;
+    align-self: center;
+}
