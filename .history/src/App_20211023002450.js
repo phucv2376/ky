@@ -100,7 +100,7 @@ function App() {
                     <div
                         style={{
                             margin: "auto",
-                            width: "70%",
+                            width: "50%",
                             height: "50%",
                             display: "flex",
                         }}>

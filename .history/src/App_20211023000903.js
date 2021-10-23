@@ -97,15 +97,7 @@ function App() {
                     <Grid container xs={12}>
                         <DisplayDate date={states.date} />
                     </Grid>
-                    <div
-                        style={{
-                            margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
-                        }}>
-                        <Quote quote={states.quote} />
-                    </div>
+                    <Quote quote={states.quote} />
                 </div>
             ) : (
                 ""

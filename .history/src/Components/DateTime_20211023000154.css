@@ -1,0 +1,12 @@
+.DateTime-container {
+    border: red 2px solid;
+    height: 100vh;
+}
+
+.Date-text {
+    margin: 30px;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 5px 5px #00000080;
+}

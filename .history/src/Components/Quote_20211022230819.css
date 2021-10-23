@@ -1,0 +1,10 @@
+.Quote__container {
+    margin: 120px;
+    text-align: right;
+}
+.Quote__text {
+    color: white;
+    font-weight: 450;
+    font-size: 50px;
+    text-shadow: 2px 2px 1em red, 0px 0px 1em lightblue, 0px 0px 0.2em blue;
+}

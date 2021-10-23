@@ -1,7 +1,5 @@
 .Quote__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    boreder: red 1px solid;
 }
 
 .Quote__text {

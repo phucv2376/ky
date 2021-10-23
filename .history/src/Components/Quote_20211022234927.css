@@ -1,9 +1,8 @@
 .Quote__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 120px;
+    text-align: right;
+    height: min-content;
 }
-
 .Quote__text {
     color: white;
     font-weight: 450;

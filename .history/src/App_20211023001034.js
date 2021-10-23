@@ -94,18 +94,15 @@ function App() {
                     <Grid container xs={12}>
                         <NavBar weather={states.weather} />
                     </Grid>
-                    <Grid container xs={12}>
+                    <Grid
+                        container
+                        xs={12}
+                        justifyContent="center"
+                        alignContent="center"
+                        style={{ border: "solid red 2px" }}>
                         <DisplayDate date={states.date} />
                     </Grid>
-                    <div
-                        style={{
-                            margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
-                        }}>
-                        <Quote quote={states.quote} />
-                    </div>
+                    <Quote quote={states.quote} />
                 </div>
             ) : (
                 ""

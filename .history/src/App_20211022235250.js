@@ -4,7 +4,7 @@ import "./App.css";
 import Quote from "./Components/Quote";
 import axios from "axios";
 import NavBar from "./Components/NavBar";
-import DisplayDate from "./Components/DisplayDate";
+import DateTime from "./Components/DateTime";
 import format from "date-fns/format";
 import Grid from "@mui/material/Grid";
 
@@ -88,24 +88,14 @@ function App() {
                         backgroundImage: `url(${img})`,
                         backgroundSize: "100%",
                         width: "100%",
-                        height: "100%",
                         backgroundRepeat: "no-repeat",
+                        border: "red 9px solid",
                     }}>
                     <Grid container xs={12}>
                         <NavBar weather={states.weather} />
                     </Grid>
-                    <Grid container xs={12}>
-                        <DisplayDate date={states.date} />
-                    </Grid>
-                    <div
-                        style={{
-                            margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
-                        }}>
-                        <Quote quote={states.quote} />
-                    </div>
+                    <DateTime date={states.date} />
+                    <Quote quote={states.quote} />
                 </div>
             ) : (
                 ""

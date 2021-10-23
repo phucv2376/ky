@@ -99,10 +99,9 @@ function App() {
                     </Grid>
                     <div
                         style={{
-                            margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
+                            alignSelf: "center",
+                            justifyContent: "center",
+                            border: "1px solid red",
                         }}>
                         <Quote quote={states.quote} />
                     </div>

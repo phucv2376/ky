@@ -100,9 +100,8 @@ function App() {
                     <div
                         style={{
                             margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
+                            width: "90v",
+                            border: "red",
                         }}>
                         <Quote quote={states.quote} />
                     </div>

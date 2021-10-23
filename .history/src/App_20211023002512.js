@@ -102,6 +102,7 @@ function App() {
                             margin: "auto",
                             width: "70%",
                             height: "50%",
+                            border: "red 20px solid"
                             display: "flex",
                         }}>
                         <Quote quote={states.quote} />

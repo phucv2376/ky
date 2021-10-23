@@ -1,0 +1,10 @@
+.DateTime-container {
+    flex-grow: 1;
+}
+
+.DateTime-text {
+    color: white;
+    font-size: 70px;
+    font-weight: bolder;
+    text-shadow: 5px 5px #00000080;
+}
