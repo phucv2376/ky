@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ky/static/css/main.702445e0.chunk.css",
+    "main.js": "/ky/static/js/main.87ea6567.chunk.js",
+    "main.js.map": "/ky/static/js/main.87ea6567.chunk.js.map",
+    "runtime-main.js": "/ky/static/js/runtime-main.27dff79c.js",
+    "runtime-main.js.map": "/ky/static/js/runtime-main.27dff79c.js.map",
+    "static/js/2.58187dd2.chunk.js": "/ky/static/js/2.58187dd2.chunk.js",
+    "static/js/2.58187dd2.chunk.js.map": "/ky/static/js/2.58187dd2.chunk.js.map",
+    "index.html": "/ky/index.html",
+    "static/css/main.702445e0.chunk.css.map": "/ky/static/css/main.702445e0.chunk.css.map",
+    "static/js/2.58187dd2.chunk.js.LICENSE.txt": "/ky/static/js/2.58187dd2.chunk.js.LICENSE.txt",
+    "static/media/clearDay1.jpg": "/ky/static/media/clearDay1.471232df.jpg",
+    "static/media/clearDay2.jpg": "/ky/static/media/clearDay2.4a161759.jpg",
+    "static/media/clearDay3.jpg": "/ky/static/media/clearDay3.6e22390a.jpg",
+    "static/media/WeatherModal.css": "/ky/static/media/modal-clearDay.3dd15296.jpg",
+    "static/media/snowy2.jpg": "/ky/static/media/snowy2.8588f75d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27dff79c.js",
+    "static/js/2.58187dd2.chunk.js",
+    "static/css/main.702445e0.chunk.css",
+    "static/js/main.87ea6567.chunk.js"
+  ]
+}
