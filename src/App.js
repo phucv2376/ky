@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
-import React from "react";
-import "./App.css";
-import Quote from "./Components/Quote";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Home from "./Home";
+import Journal from "./Journal";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import NavBar from "./Components/NavBar";
-import DisplayDate from "./Components/DisplayDate";
-import format from "date-fns/format";
-import Grid from "@mui/material/Grid";
+import { format, formatRelative, subDays } from "date-fns";
+import axios from "axios";
 
-function App() {
+const App = () => {
     useEffect(() => {
         fetchQuote();
         fetchWeather();
@@ -18,6 +16,7 @@ function App() {
         date: format(new Date(), "E. MMM d, yyyy"),
         weather: "",
         quote: null,
+        time: format(new Date(), "H:mm a"),
     });
     const [fetchStatus, setFetchStatus] = useState({
         fetchQuote: false,
@@ -72,46 +71,41 @@ function App() {
             img = require(`./Images/snowy2.jpg`).default;
         }
     };
-    console.log(states.weather);
-    console.log(states.quote);
 
     if (fetchStatus.fetchWeather === true) {
         handleBackground();
     }
+
+    ////
+
     return (
         <div>
             {fetchStatus.fetchWeather === true &&
             fetchStatus.fetchQuote === true ? (
-                <div
-                    style={{
-                        position: "absolute",
-                        backgroundImage: `url(${img})`,
-                        backgroundSize: "100%",
-                        width: "100%",
-                        height: "100%",
-                        backgroundRepeat: "no-repeat",
-                    }}>
-                    <Grid container xs={12}>
-                        <NavBar weather={states.weather} />
-                    </Grid>
-                    <Grid container xs={12}>
-                        <DisplayDate date={states.date} />
-                    </Grid>
-                    <div
-                        style={{
-                            margin: "auto",
-                            width: "70%",
-                            height: "50%",
-                            display: "flex",
-                        }}>
-                        <Quote quote={states.quote} />
-                    </div>
-                </div>
+                <BrowserRouter>
+                    <NavBar weather={states.weather} />
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <Home
+                                    fetchStatus={fetchStatus}
+                                    states={states}
+                                    img={img}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/journal"
+                            element={<Journal img={img} date={states.date} />}
+                        />
+                    </Routes>
+                </BrowserRouter>
             ) : (
                 ""
             )}
         </div>
     );
-}
+};
 
 export default App;

@@ -38,17 +38,17 @@ const NavBar = (props) => {
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/a">
+                        <a className="navLink" href="/">
                             Calendar
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/b">
+                        <a className="navLink" href="/Journal">
                             Journal
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/c">
+                        <a className="navLink" href="/Notes">
                             Notes
                         </a>
                     </li>
