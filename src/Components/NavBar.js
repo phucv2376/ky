@@ -33,22 +33,22 @@ const NavBar = (props) => {
             <Grid item xs={10} alignSelf="center">
                 <ul className="navbar">
                     <li>
-                        <a className="navLink" href="/">
+                        <a className="navLink" href="/ky">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/">
+                        <a className="navLink" href="/ky/#/calendar">
                             Calendar
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/Journal">
+                        <a className="navLink" href="/ky/#/journal">
                             Journal
                         </a>
                     </li>
                     <li>
-                        <a className="navLink" href="/Notes">
+                        <a className="navLink" href="/ky/#/notes">
                             Notes
                         </a>
                     </li>
