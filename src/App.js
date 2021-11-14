@@ -82,10 +82,11 @@ const App = () => {
         <div>
             {fetchStatus.fetchWeather === true &&
             fetchStatus.fetchQuote === true ? (
-                <HashRouter>
+                <HashRouter basename="/">
                     <NavBar weather={states.weather} />
                     <Routes>
                         <Route
+                            exact
                             path="/"
                             element={
                                 <Home
