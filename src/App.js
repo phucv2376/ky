@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Home from "./Home";
 import Journal from "./Journal";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import { format, formatRelative, subDays } from "date-fns";
 import axios from "axios";
@@ -82,7 +82,7 @@ const App = () => {
         <div>
             {fetchStatus.fetchWeather === true &&
             fetchStatus.fetchQuote === true ? (
-                <BrowserRouter>
+                <HashRouter>
                     <NavBar weather={states.weather} />
                     <Routes>
                         <Route
@@ -100,7 +100,7 @@ const App = () => {
                             element={<Journal img={img} date={states.date} />}
                         />
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             ) : (
                 ""
             )}
