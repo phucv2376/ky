@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from "react";
 import DisplayDate from "./Components/DisplayDate";
 import "./Journal.css";
-import useKeyPress from "./hooks/useKeyPress";
+import Hotkeys from "react-hot-keys";
+import axios from "axios";
 
 const Journal = (props) => {
     const { img, date } = props;
     document.body.style.overflow = "hidden";
     document.body.style.height = "100%";
-    const isPressedf = useKeyPress("Control");
-    const isPressedg = useKeyPress("Enter");
 
-    const handleSubmit = () => {};
-
-    if (isPressedf && isPressedg) {
-        handleSubmit();
-    }
+    const handleSubmit = () => {
+        const journalLogs = document.getElementById("journalLogs").value;
+        axios
+            .post("https://ky-api.herokuapp.com/journals", {
+                date: Date(),
+                contents: journalLogs,
+            })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
 
     return (
         <div
@@ -26,9 +34,17 @@ const Journal = (props) => {
                 height: "100%",
                 backgroundRepeat: "no-repeat",
             }}>
+            <Hotkeys
+                keyName="ctrl+enter"
+                filter={(event) => {
+                    return true;
+                }}
+                onKeyDown={handleSubmit}
+            />
             <DisplayDate date={date} />
             <div className="centerElements">
                 <textarea
+                    id="journalLogs"
                     cols="100"
                     rows="20"
                     spellCheck="false"
