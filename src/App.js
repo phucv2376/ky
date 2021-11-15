@@ -7,6 +7,8 @@ import { format, formatRelative, subDays } from "date-fns";
 import axios from "axios";
 
 const App = () => {
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100%";
     useEffect(() => {
         fetchQuote();
         fetchWeather();
